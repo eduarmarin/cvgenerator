@@ -8,15 +8,24 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <nav>
+        <h1>CV generator</h1>
+      </nav>
+
+      <div className = 'maincontainer'>
+        <div className='formcontainer'>
+          div to show form
+        </div>
+        <div className='cvcontainer'>
+          div to show cv
+        </div>
       </div>
-      <h1>Vite + React</h1>
+
+      <footer className='footerdiv'>
+        footer
+      </footer>
+      
+      {/* <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -27,7 +36,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
