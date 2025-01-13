@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import viteLogo from './vite.svg'
 import './App.css'
+import Experience from './files/experience.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,10 +15,10 @@ function App() {
 
       <div className = 'maincontainer'>
         <div className='formcontainer'>
-          div to show form
+          "formcontainer" div to show form
         </div>
         <div className='cvcontainer'>
-          div to show cv
+          "cvcontainer" div to show cv
         </div>
       </div>
 

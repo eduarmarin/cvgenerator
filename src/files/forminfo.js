@@ -1,14 +1,14 @@
-var forminfo = [
-    profile = 
-        {
-            profile: 'Profile'
-        },
+export const forminfo = [
     information = 
         {
             firstname: 'first name', 
             lastname: 'lastname', 
             telephone: 'telephone', 
             email: 'email'
+        },
+    profile = 
+        {
+            profile: 'Profile'
         },
     Experience = 
         {
