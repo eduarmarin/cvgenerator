@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-//import viteLogo from './vite.svg'
+//import viteLogo from '../public/vite.svg'
 import './App.css'
 import Experience from './files/experience.jsx'
 
@@ -15,7 +15,8 @@ function App() {
 
       <div className = 'maincontainer'>
         <div className='formcontainer'>
-          "formcontainer" div to show form
+          <p>"formcontainer" div to show form</p>
+          <Experience/>
         </div>
         <div className='cvcontainer'>
           "cvcontainer" div to show cv
