@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 
-const products = [
+const info = [
   { label: 'Name', type: 'text', name: 'name'},                                                       
   { label: 'Surname', type: 'text', name: 'surname'},
   { label: 'Phone', type: 'number', name: 'phone'},
@@ -11,7 +11,7 @@ const products = [
 export function Info() {
   return (
     <div className="info common">
-      {products.map((product) => (
+      {info.map((product) => (
         <label key={product.name}>{product.label}:
           <input type={product.type} name={product.name} />
         </label>
@@ -19,27 +19,30 @@ export function Info() {
     </div>
   )
 }
-
-/* export function Info() {
+const infoexper = [
+  { label: 'Company', type: 'text', name: 'company'},                                                       
+  { label: 'Functions', type: 'textarea', name: 'functions'},
+  { label: 'Date', type: 'number', name: 'date'}
+];
+export	function Experience() {
+  const [textarea, setTextarea] = useState("The content of a textarea goes in the value attribute")
+  const handleClick = () => {console.log('this is:', this)}
   return (
-      <div className="info common">
-        <label>Name:
-          <input type="text" name="name" />
+    <div className="experience common">
+      {infoexper.map((product) => (
+        <label key={product.name}>{product.label}:
+          {product.type == 'textarea'  ? (
+            <textarea type={product.type} name={product.name} />
+            ) : (
+              <input type={product.type} name={product.name} />
+            )}
         </label>
-        <label>Surname:
-          <input type="text" name="surname" />
-        </label>
-        <label>Phone:
-          <input type="number" name="phone" />
-        </label>
-        <label>Email:
-          <input type="text" name="email" />
-        </label>
-      </div>
+      ))}
+      <button onClick={handleClick}>Add Experience</button>
+    </div>
   )
-} */
-
-export function Experience() {
+}
+/* export function Experience() {
   const [textarea, setTextarea] = useState("The content of a textarea goes in the value attribute")
   const handleClick = () => {
     console.log('this is:', this)
@@ -58,7 +61,7 @@ export function Experience() {
         <button onClick={handleClick}>Add Experience</button>
       </div>
   )
-}
+} */
 
 
 //export {Info, Experience}
