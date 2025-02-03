@@ -1,7 +1,7 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
   background-color: aliceblue;
 }
@@ -52,14 +52,23 @@
 }
 .formcontainer {
   background-color: gray;
-  width: 27%;
+  width: 30%;
 }
 .cvcontainer {
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(223, 132, 193);
   width: 70%;
+  height: 100%;
 }
-
 .footerdiv {
   background-color: lightskyblue;
   width: 100%;
+}
+.common {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 3px;
 }
