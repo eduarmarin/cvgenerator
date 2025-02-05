@@ -26,7 +26,10 @@ const infoexper = [
 ];
 
 var arrayexperience = [];
-var handleClick = () => {console.log('this is:')}
+var handleClick = () => {
+  arrayexperience.push(Experbase);
+  console.log("arraylenght: " + arrayexperience.length);
+}
 
 function Experbase() {
   const [textarea] = useState("The content of a textarea goes in the value attribute")
@@ -41,12 +44,14 @@ function Experbase() {
             )}
         </label>
       ))}
-      <button onClick={handleClick}>Add Experience</button>
+      {arrayexperience.length < 10 ?(
+        <button onClick={handleClick}>Add Experience</button>
+        ) : (
+          <button onClick={handleClick}>Delete</button>
+        )}
     </div>    
   )
 }
-arrayexperience.push(Experbase);
-console.log(arrayexperience);
 
 export	function Experience() { // function to display the experience form in column on the left down info form
   return(
