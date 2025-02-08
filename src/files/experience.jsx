@@ -23,37 +23,38 @@ const infoexper = [
   { label: 'Company', type: 'text', name: 'company'},                                                       
   { label: 'Functions', type: 'textarea', name: 'functions'},
   { label: 'Date', type: 'number', name: 'date'}
-];
+]
 
 var arrayexperience = [];
 var handleClick = () => {
+  var container1 = <div> </div>;
   arrayexperience.push(Experbase);
   console.log("arraylenght: " + arrayexperience.length);
 }
 
-function Experbase() {
+function Experbase() {  
   const [textarea] = useState("The content of a textarea goes in the value attribute")
   return (
     <div className="experience common">
       {infoexper.map((product1) => (
         <label key={product1}>{product1.label}
-           {product1.type == 'textarea'  ? (
-            <textarea type={product1.type} name={product1.name} />
+          {product1.type == 'textarea'  ? (
+            <textarea type={product1.type} name={product1.name} value={textarea} />
             ) : (
               <input type={product1.type} name={product1.name} />
             )}
         </label>
       ))}
-      {arrayexperience.length < 10 ?(
+      {arrayexperience.length < 1 ?(
         <button onClick={handleClick}>Add Experience</button>
         ) : (
           <button onClick={handleClick}>Delete</button>
         )}
     </div>    
-  )
+  ) 
 }
 
-export	function Experience() { // function to display the experience form in column on the left down info form
+export function Experience() { // function to display the experience form in column on the left down info form
   return(
     <Experbase/>
   )
